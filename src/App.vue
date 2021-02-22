@@ -1,4 +1,5 @@
 <template>
+<!--  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
   <div id="app">
     <component :is="layout">
       <router-view/>
@@ -21,7 +22,8 @@ export default {
   }
 }
 </script>
-<style>
+<style >
 @import "~materialize-css/dist/css/materialize.min.css";
 @import "assets/index.css";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 </style>
