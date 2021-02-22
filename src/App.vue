@@ -1,7 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-    </div>
-    <router-view/>
+    <component :is="layout">
+      <router-view/>
+    </component>
   </div>
 </template>
+<script>
+import EmptyLayout from '@/layouts/EmptyLayout'
+import MainLayout from '@/layouts/MainLayout'
+
+export default {
+  computed: {
+    layout() {
+      console.log()
+      return (this.$route.meta.layout || 'empty')+'-layout'
+    }
+  },
+  components:{
+    EmptyLayout,MainLayout
+  }
+}
+</script>
+<style>
+@import "~materialize-css/dist/css/materialize.min.css";
+@import "assets/index.css";
+</style>
